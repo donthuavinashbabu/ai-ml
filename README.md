@@ -4,9 +4,11 @@ A personal practice repo for exploring AI and ML topics through hands-on experim
 
 ## Docs
 
-Browse the notes in [`/docs`](./docs/index.md).
+Open the HTML docs: [`docs/index.html`](./docs/index.html)
 
-To publish them as a site on GitHub: **Settings → Pages → Source: Deploy from a branch → Branch: `main` → Folder: `/docs`**.
+Layout: left-side menu, right-side page content.
+
+To publish on GitHub Pages: **Settings → Pages → Source: Deploy from a branch → Branch: `main` → Folder: `/docs`**.
 
 ## Focus areas
 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claude · AI / ML Practice Docs</title>
+    <meta
+      name="description"
+      content="Claude ecosystem notes — products, models, Claude Code, plans, and CLI."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;650&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+  </head>
+  <body>
+    <div class="backdrop" data-backdrop></div>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Documentation menu">
+        <a class="brand" href="../index.html">
+          AI / ML Practice
+          <span>Documentation</span>
+        </a>
+
+        <p class="nav-label">Browse</p>
+        <nav class="nav">
+          <a href="../index.html">Overview</a>
+          <a class="active" href="index.html">Claude</a>
+        </nav>
+
+        <p class="nav-label">On this page</p>
+        <nav class="nav sub">
+          <a href="#materials">Learning materials</a>
+          <a href="#products">Products</a>
+          <a href="#models">Models</a>
+          <a href="#features">Features</a>
+          <a href="#skills">Skills / plugins</a>
+          <a href="#claude-code">Claude Code</a>
+          <a href="#claude-cowork">Claude Cowork</a>
+          <a href="#plans">Plans &amp; pricing</a>
+          <a href="#cli">CLI access</a>
+          <a href="#claude-md">CLAUDE.md</a>
+        </nav>
+      </aside>
+
+      <div class="content-wrap">
+        <div class="topbar">
+          <button class="menu-btn" type="button" data-menu-toggle aria-label="Open menu">☰</button>
+          <div class="topbar-title">Claude</div>
+        </div>
+
+        <main class="main">
+          <p class="eyebrow">Topic</p>
+          <h1>Claude</h1>
+          <p class="lead">
+            Notes on the Claude ecosystem — products, models, Claude Code, Cowork, and related
+            tooling.
+          </p>
+
+          <section class="section" id="materials">
+            <h2>Learning materials</h2>
+            <ul>
+              <li>
+                <a href="https://www.youtube.com/watch?v=TAKDIvvUdc4" target="_blank" rel="noopener"
+                  >Complete Claude Code Course In 2 Hours For Developers</a
+                >
+              </li>
+              <li>
+                <a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener"
+                  >Claude Code docs</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=ntDI2fCgcb0" target="_blank" rel="noopener"
+                  >Getting Started With Claude Ecosystem — Claude Chat, Claude Cowork And Claude
+                  Code</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=CSgbgtmhkAk" target="_blank" rel="noopener"
+                  >How Does Claude Code Work — Installation And Quickstart With IDE</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=bTyRYBE4hMM" target="_blank" rel="noopener"
+                  >How To Build Agents With Claude Code</a
+                >
+              </li>
+              <li>
+                <a href="https://docs.claude.com" target="_blank" rel="noopener">Claude docs</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="section" id="products">
+            <h2>Products</h2>
+            <div class="grid">
+              <div class="pill">Claude Chat</div>
+              <div class="pill">Claude Code</div>
+              <div class="pill">Claude Cowork</div>
+              <div class="pill">Claude Security</div>
+            </div>
+          </section>
+
+          <section class="section" id="models">
+            <h2>Models</h2>
+            <div class="grid">
+              <div class="pill">Haiku</div>
+              <div class="pill">Sonnet</div>
+              <div class="pill">Opus</div>
+              <div class="pill">Fable</div>
+            </div>
+          </section>
+
+          <section class="section" id="features">
+            <h2>Features</h2>
+            <ul>
+              <li>Claude for Chrome</li>
+              <li>Claude for Slack</li>
+              <li>Claude for Word, Excel, PowerPoint</li>
+            </ul>
+          </section>
+
+          <section class="section" id="skills">
+            <h2>Skills / plugins / connectors</h2>
+            <div class="note">Skills, plugins, and connectors — to be filled as you practice.</div>
+          </section>
+
+          <section class="section" id="claude-code">
+            <h2>Claude Code</h2>
+            <ul>
+              <li>For developers</li>
+              <li>For vibe coding</li>
+              <li>Agentic coding tool</li>
+            </ul>
+          </section>
+
+          <section class="section" id="claude-cowork">
+            <h2>Claude Cowork</h2>
+            <p>Like a personal AI assistant that stays on the local computer.</p>
+          </section>
+
+          <section class="section" id="plans">
+            <h2>Plans and pricing</h2>
+            <div class="grid">
+              <div class="pill">Free</div>
+              <div class="pill">Pro</div>
+              <div class="pill">Max</div>
+            </div>
+          </section>
+
+          <section class="section" id="cli">
+            <h2>CLI access</h2>
+            <pre><code>claude --version
+claude</code></pre>
+
+            <h3>Useful commands</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>claude --context</code> / <code>/context</code></td>
+                    <td>Check context — model in use, skills, conversation context</td>
+                  </tr>
+                  <tr>
+                    <td><code>/login</code></td>
+                    <td>Log in</td>
+                  </tr>
+                  <tr>
+                    <td><code>/agents</code></td>
+                    <td>Agents</td>
+                  </tr>
+                  <tr>
+                    <td><code>/skills</code></td>
+                    <td>Skills</td>
+                  </tr>
+                  <tr>
+                    <td><code>/models</code></td>
+                    <td>Models</td>
+                  </tr>
+                  <tr>
+                    <td><code>/mcp</code></td>
+                    <td>MCP</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="claude-md">
+            <h2>CLAUDE.md</h2>
+            <p>Save and move context into <code>CLAUDE.md</code> for persistent project guidance.</p>
+          </section>
+
+          <p class="footer-note">Raw notes: <code>claude/notes.md</code> in the repository.</p>
+        </main>
+      </div>
+    </div>
+    <script src="../assets/js/docs.js"></script>
+  </body>
+</html>
