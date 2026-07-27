@@ -1,0 +1,11 @@
+title: AI / ML Practice
+description: Notes and experiments on LLMs, agents, RAG, vector databases, and related tooling.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+header_pages:
+  - claude/index.md
