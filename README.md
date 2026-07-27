@@ -4,11 +4,12 @@ A personal practice repo for exploring AI and ML topics through hands-on experim
 
 ## Docs
 
-Open the HTML docs: [`docs/index.html`](./docs/index.html)
+Open in browser: **[AI / ML Practice Docs](https://donthuavinashbabu.github.io/ai-ml/)**
 
 Layout: left-side menu, right-side page content.
 
-To publish on GitHub Pages: **Settings → Pages → Source: Deploy from a branch → Branch: `main` → Folder: `/docs`**.
+First-time setup (once): **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+After that, each push to `main` publishes `docs/` automatically.
 
 ## Focus areas
 
