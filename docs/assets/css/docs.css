@@ -109,6 +109,19 @@ a:hover {
   gap: 0.2rem;
 }
 
+.nav-item-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.nav-item-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.15rem;
+}
+
 .nav a {
   display: block;
   padding: 0.55rem 0.75rem;
@@ -132,10 +145,73 @@ a:hover {
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
-.nav.sub {
-  margin: 0.15rem 0 0.55rem 0.55rem;
+.nav-group-label {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.55rem;
+  color: var(--sidebar-text);
+  font-weight: 560;
+  font-size: 0.95rem;
+}
+
+.nav-toggle {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.45rem;
+  background: transparent;
+  color: var(--sidebar-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.nav-toggle-icon {
+  display: block;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 180ms ease;
+}
+
+.nav-item-group.is-open .nav-toggle-icon {
+  transform: rotate(45deg);
+}
+
+.nav-subpanel {
+  display: none;
+  margin: 0.1rem 0 0.35rem 0.55rem;
   padding-left: 0.55rem;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-item-group.is-open .nav-subpanel {
+  display: block;
+  animation: nav-open 180ms ease;
+}
+
+@keyframes nav-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav.sub {
   gap: 0.05rem;
 }
 

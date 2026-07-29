@@ -28,22 +28,64 @@
         <p class="nav-label">Browse</p>
         <nav class="nav">
           <a href="../index.html">Overview</a>
-          <a class="active" href="index.html">Claude</a>
+
+          <div class="nav-item-group is-open" data-nav-group>
+            <div class="nav-item-row">
+              <a class="active" href="index.html">Claude</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="true"
+                aria-controls="nav-claude-sub"
+                aria-label="Collapse Claude sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-claude-sub">
+              <nav class="nav sub">
+                <a href="#materials">Learning materials</a>
+                <a href="#products">Products</a>
+                <a href="#models">Models</a>
+                <a href="#features">Features</a>
+                <a href="#skills">Skills / plugins</a>
+                <a href="#claude-code">Claude Code</a>
+                <a href="#how-claude-code-works">How Claude Code works</a>
+                <a href="#claude-cowork">Claude Cowork</a>
+                <a href="#plans">Plans &amp; pricing</a>
+                <a href="#cli">CLI access</a>
+                <a href="#claude-md">CLAUDE.md</a>
+              </nav>
+            </div>
+          </div>
         </nav>
 
-        <p class="nav-label">On this page</p>
-        <nav class="nav sub">
-          <a href="#materials">Learning materials</a>
-          <a href="#products">Products</a>
-          <a href="#models">Models</a>
-          <a href="#features">Features</a>
-          <a href="#skills">Skills / plugins</a>
-          <a href="#claude-code">Claude Code</a>
-          <a href="#how-claude-code-works">How Claude Code works</a>
-          <a href="#claude-cowork">Claude Cowork</a>
-          <a href="#plans">Plans &amp; pricing</a>
-          <a href="#cli">CLI access</a>
-          <a href="#claude-md">CLAUDE.md</a>
+        <p class="nav-label">Coming soon</p>
+        <nav class="nav">
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <span class="nav-group-label">Topics</span>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-soon-sub"
+                aria-label="Expand coming soon topics"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-soon-sub">
+              <nav class="nav sub">
+                <a href="../index.html#focus">Agents</a>
+                <a href="../index.html#focus">RAG</a>
+                <a href="../index.html#focus">Vector databases</a>
+                <a href="../index.html#focus">MCP</a>
+              </nav>
+            </div>
+          </div>
         </nav>
       </aside>
 

@@ -28,15 +28,64 @@
         <p class="nav-label">Browse</p>
         <nav class="nav">
           <a class="active" href="index.html">Overview</a>
-          <a href="claude/index.html">Claude</a>
+
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <a href="claude/index.html">Claude</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-claude-sub"
+                aria-label="Expand Claude sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-claude-sub">
+              <nav class="nav sub">
+                <a href="claude/index.html#materials">Learning materials</a>
+                <a href="claude/index.html#products">Products</a>
+                <a href="claude/index.html#models">Models</a>
+                <a href="claude/index.html#features">Features</a>
+                <a href="claude/index.html#skills">Skills / plugins</a>
+                <a href="claude/index.html#claude-code">Claude Code</a>
+                <a href="claude/index.html#how-claude-code-works">How Claude Code works</a>
+                <a href="claude/index.html#claude-cowork">Claude Cowork</a>
+                <a href="claude/index.html#plans">Plans &amp; pricing</a>
+                <a href="claude/index.html#cli">CLI access</a>
+                <a href="claude/index.html#claude-md">CLAUDE.md</a>
+              </nav>
+            </div>
+          </div>
         </nav>
 
         <p class="nav-label">Coming soon</p>
         <nav class="nav">
-          <a href="#focus">Agents</a>
-          <a href="#focus">RAG</a>
-          <a href="#focus">Vector databases</a>
-          <a href="#focus">MCP</a>
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <span class="nav-group-label">Topics</span>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-soon-sub"
+                aria-label="Expand coming soon topics"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-soon-sub">
+              <nav class="nav sub">
+                <a href="#focus">Agents</a>
+                <a href="#focus">RAG</a>
+                <a href="#focus">Vector databases</a>
+                <a href="#focus">MCP</a>
+              </nav>
+            </div>
+          </div>
         </nav>
       </aside>
 
