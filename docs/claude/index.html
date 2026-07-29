@@ -251,6 +251,10 @@ claude</code></pre>
                     <td><code>/mcp</code></td>
                     <td>MCP</td>
                   </tr>
+                  <tr>
+                    <td><code>claude -r</code> / <code>claude --resume</code></td>
+                    <td>Load previous context when starting a new Claude session</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -259,6 +263,31 @@ claude</code></pre>
           <section class="section" id="claude-md">
             <h2>CLAUDE.md</h2>
             <p>Save and move context into <code>CLAUDE.md</code> for persistent project guidance.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>File</th>
+                    <th>Scope</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>./CLAUDE.md</code></td>
+                    <td>Project level — can be committed and shared with the team</td>
+                  </tr>
+                  <tr>
+                    <td><code>./CLAUDE.local.md</code></td>
+                    <td>Personal overrides — do not commit; add to <code>.gitignore</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>~/.claude/CLAUDE.md</code></td>
+                    <td>Global — applies to all projects</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Use the <code>/init</code> command to create a project-level <code>CLAUDE.md</code>.</p>
           </section>
 
           <p class="footer-note">Raw notes: <code>claude/notes.md</code> in the repository.</p>

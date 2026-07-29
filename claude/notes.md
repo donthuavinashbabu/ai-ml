@@ -70,7 +70,18 @@ claude --context
 /models
 
 /mcp
+
+to load previous context when new claude session is starting:
+claude -r
+claude --resume
+
 --------------------------------------------------------------
 calude.md
 
 - save move context to claude
+- ./CLAUDE.md - project level. Can be committed and shared with team
+- ./CLAUDE.local.md - personal overrides. Do not commit. Add to gitignore
+- ~/.claude/CLAUDE.md - global and applies to all projects
+- `/init` command creates CLAUDE.md file at project level
+
+---------------------------------------------------------
