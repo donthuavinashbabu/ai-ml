@@ -56,6 +56,7 @@
                 <a href="#plans">Plans &amp; pricing</a>
                 <a href="#cli">CLI access</a>
                 <a href="#claude-md">CLAUDE.md</a>
+                <a href="#agents">Agents</a>
               </nav>
             </div>
           </div>
@@ -169,7 +170,17 @@
 
           <section class="section" id="skills">
             <h2>Skills / plugins / connectors</h2>
-            <div class="note">Skills, plugins, and connectors — to be filled as you practice.</div>
+            <ul>
+              <li>
+                <strong>Skills</strong> — reusable, versioned collection of instructions, resources,
+                and examples that teaches Claude how to complete specific tasks.
+              </li>
+              <li>
+                <strong>Plugins</strong> — packaged integration that provides tools, resources, and
+                capabilities to Claude.
+              </li>
+              <li><strong>Connectors</strong> — to be filled as you practice.</li>
+            </ul>
           </section>
 
           <section class="section" id="claude-code">
@@ -255,6 +266,18 @@ claude</code></pre>
                     <td><code>claude -r</code> / <code>claude --resume</code></td>
                     <td>Load previous context when starting a new Claude session</td>
                   </tr>
+                  <tr>
+                    <td><code>claude agents</code></td>
+                    <td>See in-progress and need-input tasks from agents</td>
+                  </tr>
+                  <tr>
+                    <td><code>/bg</code></td>
+                    <td>Check background agents</td>
+                  </tr>
+                  <tr>
+                    <td><code>/reload-plugins</code></td>
+                    <td>Reload plugins to get recent updates</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -288,6 +311,19 @@ claude</code></pre>
               </table>
             </div>
             <p>Use the <code>/init</code> command to create a project-level <code>CLAUDE.md</code>.</p>
+          </section>
+
+          <section class="section" id="agents">
+            <h2>Agents</h2>
+            <p>Sub-agents vs agent teams.</p>
+            <figure class="doc-figure">
+              <img
+                src="../assets/img/sub-agents-vs-agen-teams.jpeg"
+                alt="Comparison of Sub Agents versus Agent Teams"
+                loading="lazy"
+              />
+              <figcaption>Sub Agents vs Agent Team</figcaption>
+            </figure>
           </section>
 
           <p class="footer-note">Raw notes: <code>claude/notes.md</code> in the repository.</p>

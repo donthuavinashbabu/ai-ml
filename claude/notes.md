@@ -29,10 +29,10 @@ claude for word, excel, powerpoint
 
 ---------------------------------------------------------
 Skills:
-
+- Reusable, versioned collection of instructions, resources and examples  that teaches claude how to complete specific tasks.
 ---------------------------------------------------------
 Plugins:
-
+- Packaged integration that provides tools, resources, capabilities to claude
 ---------------------------------------------------------
 Connectors:
 
@@ -75,6 +75,14 @@ to load previous context when new claude session is starting:
 claude -r
 claude --resume
 
+To see work done inprogress need-input tasks by agents
+claude agents
+
+To check background agents
+/bg
+
+To reload plugins to get recent updates
+/reload-plugins
 --------------------------------------------------------------
 calude.md
 
@@ -85,3 +93,5 @@ calude.md
 - `/init` command creates CLAUDE.md file at project level
 
 ---------------------------------------------------------
+Agents:
+[Sub Agents vs Agent Team](imgs/sub-agents-vs-agen-teams.jpeg)
