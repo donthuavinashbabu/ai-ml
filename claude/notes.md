@@ -8,6 +8,9 @@ Claude code docs - https://code.claude.com/docs/en/overview
 3- How To Build Agents With Claude Code - https://www.youtube.com/watch?v=bTyRYBE4hMM
 https://docs.claude.com
 ---------------------------------------------------------
+Install claude cli in local:
+npm install -g @anthropic-ai/claude-code@latest
+---------------------------------------------------------
 Products:
 Claude chat
 claude code
