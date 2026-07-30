@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chroma DB Notes · AI / ML Practice Docs</title>
+    <meta
+      name="description"
+      content="Chroma DB notes — vectors, embeddings, distance functions, and vector databases."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;650&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+  </head>
+  <body>
+    <div class="backdrop" data-backdrop></div>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Documentation menu">
+        <a class="brand" href="../index.html">
+          AI / ML Practice
+          <span>Documentation</span>
+        </a>
+
+        <p class="nav-label">Browse</p>
+        <nav class="nav">
+          <a href="../index.html">Overview</a>
+
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <a href="../claude/index.html">Claude</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-claude-sub"
+                aria-label="Expand Claude sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-claude-sub">
+              <nav class="nav sub">
+                <a href="../claude/index.html#materials">Learning materials</a>
+                <a href="../claude/index.html#products">Products</a>
+                <a href="../claude/index.html#models">Models</a>
+                <a href="../claude/index.html#features">Features</a>
+                <a href="../claude/index.html#skills">Skills / plugins</a>
+                <a href="../claude/index.html#claude-code">Claude Code</a>
+                <a href="../claude/index.html#cli">CLI access</a>
+                <a href="../claude/index.html#agents">Agents</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="nav-item-group is-open" data-nav-group>
+            <div class="nav-item-row">
+              <a class="active" href="notes.html">Chroma DB</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="true"
+                aria-controls="nav-chroma-sub"
+                aria-label="Collapse Chroma DB sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-chroma-sub">
+              <nav class="nav sub">
+                <a class="active" href="notes.html">Notes</a>
+                <a href="practice.html">Practice</a>
+              </nav>
+            </div>
+          </div>
+        </nav>
+
+        <p class="nav-label">Coming soon</p>
+        <nav class="nav">
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <span class="nav-group-label">Topics</span>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-soon-sub"
+                aria-label="Expand coming soon topics"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-soon-sub">
+              <nav class="nav sub">
+                <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/Intro-to-AI-Agents-and-Agentic-AI.md" target="_blank" rel="noopener">Agents</a>
+                <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/notes.md" target="_blank" rel="noopener">RAG / AI notes</a>
+                <a href="../claude/index.html#cli">MCP</a>
+              </nav>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content-wrap">
+        <div class="topbar">
+          <button class="menu-btn" type="button" data-menu-toggle aria-label="Open menu">☰</button>
+          <div class="topbar-title">Chroma DB · Notes</div>
+        </div>
+
+        <main class="main">
+          <p class="eyebrow">Topic</p>
+          <h1>Chroma DB Notes</h1>
+          <p class="lead">
+            Notes on unstructured data, vectors, embeddings, and ChromaDB as an AI-native vector
+            database.
+          </p>
+
+          <section class="section" id="data">
+            <h2>Data</h2>
+            <ul>
+              <li>Data comes in 3 formats: <strong>structured</strong>, <strong>semi-structured</strong>, <strong>unstructured</strong>.</li>
+              <li>
+                By 2028, the global datasphere is estimated around <strong>400 zettabytes</strong>
+                (1 zettabyte = 10<sup>21</sup> bytes). About <strong>80%</strong> is unstructured —
+                no fixed size or format.
+              </li>
+              <li>
+                How do we analyze data with no fixed size or format?
+                <strong>Machine learning</strong> (especially deep learning).
+              </li>
+            </ul>
+            <h3>Examples of unstructured data</h3>
+            <ul>
+              <li>Sensor data (temperature, GPS, …)</li>
+              <li>Machine / system logs</li>
+              <li>Internet of Things (IoT)</li>
+              <li>Computer vision</li>
+              <li>Emails, text messages, social posts</li>
+              <li>Audio / video recordings</li>
+            </ul>
+          </section>
+
+          <section class="section" id="vectors">
+            <h2>Vectors and embeddings</h2>
+            <ul>
+              <li>Unstructured data keeps growing — we need indexing and search.</li>
+              <li>
+                A <strong>vector database</strong> stores and searches massive unstructured datasets
+                using <strong>embeddings</strong> from ML models.
+              </li>
+              <li><strong>Embeddings</strong> are the heart of a vector database.</li>
+              <li>
+                Unstructured input (text, image, audio, video) → embedding model → series of numbers
+                called a <strong>vector</strong> (also called an embedding).
+              </li>
+              <li>Those vectors are stored in the vector database.</li>
+            </ul>
+            <figure class="doc-figure">
+              <img
+                src="../assets/img/vector-embeddings.png"
+                alt="Unstructured data represented as vectors via embeddings"
+                loading="lazy"
+              />
+              <figcaption>Unstructured data → vectors / embeddings</figcaption>
+            </figure>
+            <figure class="doc-figure">
+              <img
+                src="../assets/img/embedding.png"
+                alt="Input text to embedding LLM producing a series of numbers"
+                loading="lazy"
+              />
+              <figcaption>Input → embedding-capable model → vector numbers</figcaption>
+            </figure>
+          </section>
+
+          <section class="section" id="chromadb">
+            <h2>ChromaDB</h2>
+            <ul>
+              <li>AI-native open-source embedding database</li>
+              <li>Built-in capability for embeddings</li>
+            </ul>
+          </section>
+
+          <section class="section" id="distance">
+            <h2>Distance function</h2>
+            <ul>
+              <li>
+                ChromaDB’s <code>distance</code> function measures difference between items in a
+                collection — important for similarity queries.
+              </li>
+              <li>
+                Default is <strong>L2 (Euclidean distance)</strong>.
+              </li>
+              <li>
+                <strong>Cosine</strong> similarity compares vectors by the cosine of the angle
+                between them — useful for high-dimensional, sparse text data.
+              </li>
+            </ul>
+            <p>Change the distance metric when creating/getting a collection:</p>
+<pre><code># changing distance calculation metric to cosine similarity
+collection4 = client.get_or_create_collection(
+    name="collection4", metadata={"hnsw:space": "cosine"}
+)</code></pre>
+          </section>
+
+          <p class="footer-note">
+            Source:
+            <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/chroma-db/Master-Vector-Database-ChromaDB.md" target="_blank" rel="noopener"
+              ><code>chroma-db/Master-Vector-Database-ChromaDB.md</code></a
+            >
+            ·
+            <a href="practice.html">Practice</a>
+          </p>
+        </main>
+      </div>
+    </div>
+    <script src="../assets/js/docs.js"></script>
+  </body>
+</html>

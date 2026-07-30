@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chroma DB Practice · AI / ML Practice Docs</title>
+    <meta
+      name="description"
+      content="Hands-on ChromaDB practice — install, create collections, add embeddings, and query."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;650&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+  </head>
+  <body>
+    <div class="backdrop" data-backdrop></div>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Documentation menu">
+        <a class="brand" href="../index.html">
+          AI / ML Practice
+          <span>Documentation</span>
+        </a>
+
+        <p class="nav-label">Browse</p>
+        <nav class="nav">
+          <a href="../index.html">Overview</a>
+
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <a href="../claude/index.html">Claude</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-claude-sub"
+                aria-label="Expand Claude sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-claude-sub">
+              <nav class="nav sub">
+                <a href="../claude/index.html#materials">Learning materials</a>
+                <a href="../claude/index.html#products">Products</a>
+                <a href="../claude/index.html#models">Models</a>
+                <a href="../claude/index.html#features">Features</a>
+                <a href="../claude/index.html#skills">Skills / plugins</a>
+                <a href="../claude/index.html#claude-code">Claude Code</a>
+                <a href="../claude/index.html#cli">CLI access</a>
+                <a href="../claude/index.html#agents">Agents</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="nav-item-group is-open" data-nav-group>
+            <div class="nav-item-row">
+              <a class="active" href="notes.html">Chroma DB</a>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="true"
+                aria-controls="nav-chroma-sub"
+                aria-label="Collapse Chroma DB sections"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-chroma-sub">
+              <nav class="nav sub">
+                <a href="notes.html">Notes</a>
+                <a class="active" href="practice.html">Practice</a>
+              </nav>
+            </div>
+          </div>
+        </nav>
+
+        <p class="nav-label">Coming soon</p>
+        <nav class="nav">
+          <div class="nav-item-group" data-nav-group>
+            <div class="nav-item-row">
+              <span class="nav-group-label">Topics</span>
+              <button
+                class="nav-toggle"
+                type="button"
+                data-nav-toggle
+                aria-expanded="false"
+                aria-controls="nav-soon-sub"
+                aria-label="Expand coming soon topics"
+              >
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="nav-subpanel" id="nav-soon-sub">
+              <nav class="nav sub">
+                <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/Intro-to-AI-Agents-and-Agentic-AI.md" target="_blank" rel="noopener">Agents</a>
+                <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/notes.md" target="_blank" rel="noopener">RAG / AI notes</a>
+                <a href="../claude/index.html#cli">MCP</a>
+              </nav>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="content-wrap">
+        <div class="topbar">
+          <button class="menu-btn" type="button" data-menu-toggle aria-label="Open menu">☰</button>
+          <div class="topbar-title">Chroma DB · Practice</div>
+        </div>
+
+        <main class="main">
+          <p class="eyebrow">Topic</p>
+          <h1>Chroma DB Practice</h1>
+          <p class="lead">
+            Hands-on practice creating collections, adding documents with embeddings, and running
+            similarity queries.
+          </p>
+
+          <section class="section" id="setup">
+            <h2>Setup</h2>
+            <p>From <code>chroma-db/chromadb-practice</code>:</p>
+<pre><code>pip --version
+python.exe -m pip install --upgrade pip
+pip install chromadb -q
+pip install sentence-transformers -q
+
+uv add chromadb
+uv add sentence-transformers
+uv sync
+uv run python main.py</code></pre>
+            <div class="note">
+              Prefer <code>py -m pip install chromadb</code> on Windows so pip matches the
+              <code>py</code> interpreter.
+            </div>
+          </section>
+
+          <section class="section" id="run">
+            <h2>What <code>main.py</code> does</h2>
+            <ul>
+              <li>Creates a Chroma client and checks <code>heartbeat()</code></li>
+              <li>Creates / gets / lists / deletes collections</li>
+              <li>Adds documents, metadata, ids, and embeddings</li>
+              <li>Queries nearest neighbors with <code>collection.query(...)</code></li>
+            </ul>
+            <p>
+              Source file:
+              <a href="https://github.com/donthuavinashbabu/ai-ml/blob/main/chroma-db/chromadb-practice/main.py" target="_blank" rel="noopener"
+                ><code>chroma-db/chromadb-practice/main.py</code></a
+              >
+            </p>
+          </section>
+
+          <section class="section" id="sample">
+            <h2>Sample code</h2>
+<pre><code>import chromadb
+
+def main():
+    client = chromadb.Client()
+    print("heartbeat:", client.heartbeat())
+
+    collection1 = client.create_collection("collection1")
+    collection2 = client.create_collection("collection2")
+    collection3 = client.get_or_create_collection("collection3")
+
+    print("Collections:", client.list_collections())
+    client.delete_collection("collection3")
+
+    collection1.add(
+        documents=[
+            "Welcome to AI ML",
+            "Welcome to vector database",
+            "Welcome to chromadb",
+        ],
+        metadatas=[
+            {"source": "greeting", "language": "en"},
+            {"source": "greeting", "language": "en"},
+            {"source": "greeting", "language": "en"},
+        ],
+        ids=["1", "2", "3"],
+        embeddings=[
+            [0.1, 0.2, 0.3],
+            [0.4, 0.5, 0.6],
+            [0.7, 0.8, 0.9],
+        ],
+    )
+
+    print("count:", collection1.count())
+    print("details:", collection1.get())
+
+    results = collection1.query(
+        query_embeddings=[[0.1, 0.2, 0.4]],
+        n_results=3,
+    )
+    print("result:", results)
+
+if __name__ == "__main__":
+    main()</code></pre>
+          </section>
+
+          <p class="footer-note">
+            Practice folder:
+            <a href="https://github.com/donthuavinashbabu/ai-ml/tree/main/chroma-db/chromadb-practice" target="_blank" rel="noopener"
+              ><code>chroma-db/chromadb-practice</code></a
+            >
+            ·
+            <a href="notes.html">Notes</a>
+          </p>
+        </main>
+      </div>
+    </div>
+    <script src="../assets/js/docs.js"></script>
+  </body>
+</html>
