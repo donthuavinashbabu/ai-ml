@@ -5,7 +5,7 @@
 * Salesforce - Agent force
 
 ## AI Agents must know terms
-![picture](imgs/ai-agents-must-know-terms.jpeg)
+![picture](img/ai-agents-must-know-terms.jpeg)
 
 ## Some AI Agents examples
 * Self driving car AI Agent

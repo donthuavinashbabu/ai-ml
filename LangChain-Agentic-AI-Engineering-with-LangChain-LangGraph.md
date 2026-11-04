@@ -53,7 +53,7 @@
 * LangChain text splitters
 
 ## Basic RAG Pipeline
-![picture](imgs/basic-rag-pipeline.png)
+![picture](img/basic-rag-pipeline.png)
 
 ### 🔹 Data Indexing
 1. **Documents** → raw input files (PDFs, text, etc.)  
@@ -219,7 +219,7 @@ AI agents represent a shift from passive AI systems to proactive digital teammat
 # Simple design of LangGraph Agent is for loop
 * First introduced ReAct paper
 * Simple design is `for loop` (ReAct)\
-![picture](imgs/simple-design-for-loop.jpg)
+![picture](img/simple-design-for-loop.jpg)
 
 ---
 # Graph and State Machine

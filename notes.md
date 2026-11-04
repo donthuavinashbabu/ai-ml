@@ -261,7 +261,7 @@ Deep Learning is a **subset of Machine Learning** that uses **multi-layer artifi
 ## AI vs Machine Learning vs Deep Learning
 * AI ML hierarchy from low to high
 * GenAI -> Deep Learning (Neural Networks) -> Machine Learning (Supervied/NonSupervised/ReInforced) -> Artifical Intelligence\
-![picture](imgs/ai-vs-ml-vs-dl-2.jpg)
+![picture](img/ai-vs-ml-vs-dl-2.jpg)
 
 ---
 ## LLM - Large Language Model
@@ -316,7 +316,7 @@ Deep Learning is a **subset of Machine Learning** that uses **multi-layer artifi
 
 ---
 ## ollama - Open source SLM
-* download and install. Refer [Ollama](../ollama/README.md)
+* download and install. Refer [Ollama](https://ollama.com)
 * `ollama help` - shows list of commands to use
 * `ollama list` - list downloaded models
 * `ollama run [model-name]` - run specific model

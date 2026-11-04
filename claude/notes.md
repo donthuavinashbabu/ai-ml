@@ -97,4 +97,4 @@ calude.md
 
 ---------------------------------------------------------
 Agents:
-[Sub Agents vs Agent Team](imgs/sub-agents-vs-agen-teams.jpeg)
+[Sub Agents vs Agent Team](img/sub-agents-vs-agen-teams.jpeg)

@@ -1,4 +1,21 @@
 # Chroma DB Practice
+
+## Table of Contents
+
+- [Folders](#folders)
+- [Files](#files)
+
+## Folders
+
+## Files
+
+- [.python-version](.python-version)
+- [main.py](main.py)
+- [pyproject.toml](pyproject.toml)
+- [uv.lock](uv.lock)
+
+---
+
 * Commands
 ```
 pip --version

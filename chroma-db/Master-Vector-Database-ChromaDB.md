@@ -22,13 +22,13 @@
 * `Embeddings` is heart of vector database
 * How do we represent Unstructured data
 	* We use `Vectors` to represent Unstructured data\
-![picture](imgs/vector-embeddings.png)
+![picture](img/vector-embeddings.png)
 * Input Text -> Embedding capable LLM -> Series of numbers. These numbers are called `Vectors`. Also called `Embeddings`
 * All above Vectors stored in `Vector database`
 * Again - What is Vector?
 	* Numerical array
 	* Varities of data like image, audio, video, text can be represented with Vector via embedding\
-![picture](imgs/embedding.png)
+![picture](img/embedding.png)
 
 ---
 # ChromaDB
