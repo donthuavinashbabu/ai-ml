@@ -31,5 +31,36 @@
 ---
 ## What MCP server has?
 - Resources - Data sources like files, APIs, databases
-- Prompts - 
-- Tools
+- Prompts - Reused templates that guide how model responds like setting tone, structure, task instructions, etc
+- Tools - Make the model to take actions. Executable functions that the model can use to perform tasks like generating code, searching the web, etc
+
+---
+## Inspecting MCP server live
+- Use `MCP Inspector` to inspect MCP server live
+
+---
+![picture](img/mcp-community.jpeg)
+
+---
+## MCP Development and best practices
+- Single Responsibility Principle - Design each tool to do one thing well
+- Design Flexibility - Prioritize dependency injection via constructors. Build tools like Lego bricks: small, swappable and chainable
+- Write clear, validated schemas. Use descriptive parameter names and include type hints. Define constraints (ex: min, max, regex, enums). This helps model understand how to use the tool and avoid errors.
+- Handle failures gracefully. Return clear error messages and status codes. This helps model understand what went wrong and how to fix it.
+- Performance Optimization - Cache results, batch requests, and use parallel processing. Adopt async/await patterns.
+- Secure every tool
+- Testing at all levels - Do following tests:
+    - Unit tests - Test individual tools
+    - Schema validation - Test tool parameters and responses
+    - Integration tests - Test tool interactions
+    - End to end simulation - Test tool interactions with real model
+    - Performance tests - Test tool performance under heavy usage
+    - Load and stress tests - Test tool performance under heavy usage
+    - Test edge cases - Error scenarios, rate limits, timeouts, etc
+
+---
+## Real work case studies
+- Azure AI Travel Agent
+- Real Time Docs in Terminal
+- Study Planner - Personalized study plan for students
+
