@@ -22,3 +22,4 @@
 - [notes.md](notes.md)
 - [prompts.md](prompts.md)
 - [The-Complete-Artificial-Intelligence-and-ChatGPT-Course.md](The-Complete-Artificial-Intelligence-and-ChatGPT-Course.md)
+- [Knowledge and Context and Procedural Graphs](knowledge-context-procedural-graphs.md)
