@@ -12,7 +12,7 @@
 
 ---
 ## How to handle MCP security issues?
-- Follow `Leave Privilege` Principle
+- Follow `Least Privilege` Principle
 - Use RBAC (Role Based Access Control) to manage access to MCPs and Audit roles
 
 ## Microsoft prompt shield
